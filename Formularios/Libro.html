@@ -1,24 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Libro</title>
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="/JS/Libro.js"></script>
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
+
 <body>
-
-        <div class="container">
-            
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
         </div>
+    </nav>
 
+    <!--TABLA-->
+    <section class="tabla">
+        <div class="container">
+            <div class="consulta mt-4">
+                <div class="row">
+                    <div class="col-6">
+                        <h3>
+                            LIBROS
+                        </h3>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div class="table table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>CÓDIGO DE LIBRO</th>
+                                    <th>NOMBRE LIBRO</th>
+                                    <th>ESCRITOR LIBRO</th>
+                                    <th>FECHA PUBLICACIÓN</th>
+                                    <th>ISBN</th>
+                                    <th>PRECIO</th>
+                                    <th>EDITORIAL</th>
+                                </tr>
+                            </thead>
+                            <tbody id="DataLibros">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
 
+            <!-- FORMULARIO INGRESO DE DATOS-->
 
+            <div class="libros">
+                <div class="row">
+                    <div class="col-12">
+                        <h3>
+                            AGREGAR LIBRO
+                        </h3>
+                    </div>
+                    <div class="col-12">
+                        <form action="" class="formulario" id="formulario">
+                            <!-- Grupo: Código Libro -->
+                            <div class="formulario__grupo" id="grupo__codigo">
+                                <label for="" class="formulario__label">CÓDIGO DE LIBRO</label>
+                                <input type="text" id="codigo_de_libro" class="form-control"
+                                    placeholder="Ingrese Código de Libro">
+                            </div>
+
+                            <!-- Grupo: Nombre Libro -->
+                            <div class="formulario__grupo" id="grupo__nombre">
+                                <label for="nombre" class="formulario__label">NOMBRE LIBRO</label>
+                                <input type="text" id="nombre_libro" class="form-control"
+                                    placeholder="Ingrese Nombre de Libro">
+                            </div>
+
+                            <!-- Grupo: Escritor Libro -->
+                            <div class="formulario__grupo" id="grupo__libro">
+                                <label for="" class="formulario__label">ESCRITOR LIBRO</label>
+                                <input type="text" id="escritor_libro" class="form-control"
+                                    placeholder="Ingrese Escritor de Libro">
+                            </div>
+
+                            <!-- Grupo: Fecha Publicación -->
+                            <div class="formulario__grupo" id="grupo__fecha">
+                                <label for="" class="formulario__label">FECHA PUBLICACIÓN</label>
+                                <input type="text" id="fecha_publicacion" class="form-control"
+                                    placeholder="Ingrese Fecha Publicación">
+                            </div>
+
+                            <!-- Grupo: ISBN -->
+                            <div class="formulario__grupo" id="grupo__isbn">
+                                <label for="" class="formulario__label">ISBN</label>
+                                <input type="text" id="isbn" class="form-control" placeholder="Ingrese ISBN de libro">
+                            </div>
+
+                            <!-- Grupo: Precio -->
+                            <div class="formulario__grupo" id="grupo__precio">
+                                <label for="" class="formulario__label">PRECIO</label>
+                                <input type="text" id="precio" class="form-control" placeholder="Ingrese Precio">
+                            </div>
+
+                            <!-- Grupo: Editorial -->
+                            <div class="formulario__grupo" id="grupo__editorial">
+                                <label for="" class="formulario__label">EDITORIAL</label>
+                                <input type="text" id="editorial" class="form-control" placeholder="Ingrese Editorial">
+                            </div>
+                            <hr>
+
+                            <!-- Grupo: Boton -->
+                            <div id="btnagregarlibro">
+                                <input type="submit" id="btnagregar" onclick="AgregarLibro()" value="INGRESAR LIBRO"
+                                    class="btn btn-dark">
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
 </body>
 </html>
