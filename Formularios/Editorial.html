@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editorial</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../JS/Editorial.js"></script>
+    <link rel="stylesheet" href="../CSS/estilos.css">
+</head>
+
+<body>
+
+    <!--NAVBAR-->
+    <!-- Image and text -->
+    <nav id="menu">
+        <a href="../Home.html"><img src="../Imagenes/logo-unah.png" width="170" height="90"></a>
+        <a href="../Informacion.html">INFORMACIÓN</a>
+        <span class="indicador" id="indicador"></span>
+    </nav>
+
+    <div class="container">
+        <div class="Consulta mt-4">
+            <div class="row">
+                <div class="col-6">
+                    <h3>
+                        Lista Editorial
+                    </h3>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="table table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Numero Editorial</th>
+                                <th>Nombre Editorial</th>
+                                <th>Direccion</th>
+                                <th>Pais</th>
+                                <th>Fecha de Fundacion</th>
+                                <th>Cantidad de Libros Impresos</th>
+                                <th>Numero de Telefono</th>
+                            </tr>
+
+                        </thead>
+                        <tbody class id="DataEditorial">
+
+                        </tbody>
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulario Ingreso de datos -->
+
+        <div class="Editorial">
+            <div class="row">
+                <div class="col-12">
+                    <h3>
+                        AGREGAR EDITORIAL
+                    </h3>
+                </div>
+                <div class="col-12">
+                    <form action="" class="formulario" id="formulario">
+
+                        <div class="formulario__grupo" id="grupo__numeroeditorial">
+                            <label for="" class="formulario__label">NUMERO EDITORIAL</label>
+                            <input type="text" id="numero_editorial" class="form-control"
+                                placeholder="Ingrese Numero Editorial">
+                        </div>
+
+                        <div class="formulario__grupo" id="grupo__nombreeditorial">
+                            <label for="nombre" class="formulario__label">NOMBRE EDITORIAL</label>
+                            <input type="text" id="nombre_editorial" class="form-control"
+                                placeholder="Ingrese Nombre Editorial">
+                        </div>
+
+                        <div class="formulario__grupo" id="grupo__direccion">
+                            <label for="" class="formulario__label">DIRECCION</label>
+                            <input type="text" id="direccion" class="form-control"
+                                placeholder="Ingrese Direccion">
+                        </div>
+
+                        <div class="formulario__grupo" id="grupo__pais">
+                            <label for="" class="formulario__label">PAIS</label>
+                            <input type="text" id="pais" class="form-control"
+                                placeholder="Ingrese Pais">
+                        </div>
+
+                        <div class="formulario__grupo" id="grupo__fechadefundacion">
+                            <label for="" class="formulario__label">FECHA DE FUNDACION</label>
+                            <input type="text" id="fecha_de_fundacion" class="form-control" placeholder="Ingrese Fecha de Fundacion">
+                        </div>
+
+                        <div class="formulario__grupo" id="grupo__cantidaddelibrosimpresos">
+                            <label for="" class="formulario__label">CANTIDAD DE LIBROS IMPRESOS</label>
+                            <input type="text" id="cantidad_de_libros_impresos" class="form-control" placeholder="Ingrese Cantidad de Libros Impresos">
+                        </div>
+
+                        <div class="formulario__grupo" id="grupo__numerodetelefono">
+                            <label for="" class="formulario__label">NUMERO DE TELEFONO</label>
+                            <input type="text" id="numero_de_telefono" class="form-control" placeholder="Ingrese Numero de Telefono">
+                        </div>
+                        <hr>
+
+                        <div id="btnagregareditorial">
+                            <input type="submit" id="btnagregar" onclick="AgregarEditorial()" value="INGRESAR EDITORIAL"
+                                class="btn btn-dark">
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
