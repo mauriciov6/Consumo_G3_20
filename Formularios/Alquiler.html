@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alquiler</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/JS/Alquiler.js"></script>
+    <link rel="stylesheet" href="../CSS/estilos.css">
+</head>
+
+<body>
+
+    <nav id="menu">
+        <a href="../Home.html"><img src="../Imagenes/logo-unah.png" width="170" height="90"></a>
+        <a href="../Informacion.html">INFORMACIÓN</a>
+        <span class="indicador" id="indicador"></span>
+    </nav>
+
+    <div class="container">
+        <div class="Consulta mt-4">
+            <div class="row">
+                <div class="col-6">
+                    <h3>
+                        Lista Alquiler
+                    </h3>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="table table-responsive">
+                    <table class="table table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Código de Libro</th>
+                                <th>Nombre Libro</th>
+                                <th>Fecha de Alquiler</th>
+                                <th>Nombre Cliente</th>
+                                <th>Direccion</th>
+                                <th>Dias a Alquilar</th>
+                                <th>Precio Alquiler</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+
+                        </thead>
+                        <tbody class id="DataAlquiler">
+
+                        </tbody>
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="Formulario">
+            <div class="row">
+                <div class="col-12">
+                    <h3>
+                        Agregar alquiler
+                    </h3>
+                </div>
+                <div class="col-12">
+                    <form action="" class="formulario" id="formulario">
+                        <!-- Grupo: Código Libro -->
+                        <div class="formulario__grupo" id="grupo__codigo">
+                            <label for="" class="formulario__label">CÓDIGO DE LIBRO</label>
+                            <input type="text" id="codigo_de_libro" class="form-control"
+                                placeholder="Ingrese Código de Libro">
+                        </div>
+
+                        <!-- Grupo: Nombre Libro -->
+                        <div class="formulario__grupo" id="grupo__nombre">
+                            <label for="nombre" class="formulario__label">NOMBRE LIBRO</label>
+                            <input type="text" id="nombre_libro" class="form-control"
+                                placeholder="Ingrese Nombre de Libro">
+                        </div>
+
+                        <!-- Grupo: Fecha Alquiler -->
+                        <div class="formulario__grupo" id="grupo__libro">
+                            <label for="" class="formulario__label">FECHA ALQUILER</label>
+                            <input type="text" id="fecha_de_alquiler" class="form-control"
+                                placeholder="Ingrese Fecha de Alquiler">
+                        </div>
+
+                        <!-- Grupo: Nombre Cliente -->
+                        <div class="formulario__grupo" id="grupo__cliente">
+                            <label for="" class="formulario__label">NOMBRE CLIENTE</label>
+                            <input type="text" id="nombre_cliente" class="form-control"
+                                placeholder="Ingrese Nombre Cliente">
+                        </div>
+
+                        <!-- Grupo: Direccion -->
+                        <div class="formulario__grupo" id="grupo__direccion">
+                            <label for="" class="formulario__label">DIRECCIÓN</label>
+                            <input type="text" id="direccion" class="form-control" placeholder="Ingrese la Direccion">
+                        </div>
+
+                        <!-- Grupo: Dias Alquiler -->
+                        <div class="formulario__grupo" id="grupo__precio">
+                            <label for="" class="formulario__label">DIAS ALQUILER</label>
+                            <input type="text" id="dias_a_alquilar" class="form-control"
+                                placeholder="Ingrese Los Dias a Alquilar">
+                        </div>
+
+                        <!-- Grupo: Precio Alquiler -->
+                        <div class="formulario__grupo" id="grupo__editorial">
+                            <label for="" class="formulario__label">PRECIO ALQUILER</label>
+                            <input type="text" id="precio_alquiler" class="form-control"
+                                placeholder="Ingrese Precio de Alquiler">
+                        </div>
+                        <hr>
+
+                        <!-- Grupo: Boton -->
+                        <div id="btnagregaralquiler">
+                            <input type="submit" id="btnagregar" onclick="AgregarAlquiler()" value="Ingresar Alquiler" class="btn btn-dark">
+                         </div>
+                        <br>
+                        <br>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
